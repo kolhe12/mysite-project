@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Dropdown"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <employee
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Employee"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <info
+                                                granite:class="cq-dialog-dropdown-showhide"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                emptyText="select "
+                                                fieldLabel="Employee Details"
+                                                name="./details">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-dialog-dropdown-showhide-target=".list-option-listfrom-showhide-target"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <none
+                                                        jcr:primaryType="nt:unstructured"
+                                                        selected="{Boolean}true"
+                                                        text="None"
+                                                        value="none"/>
+                                                    <empId
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Employee Id"
+                                                        value="employeeId"/>
+                                                    <empName
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Employee Name"
+                                                        value="employeeName"/>
+                                                    <empSal
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Employee Salary"
+                                                        value="employeeSalary"/>
+                                                </items>
+                                            </info>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </employee>
+                    <employeeDetails
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Employee Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <empId
+                                                granite:class="hide list-option-listfrom-showhide-target foundation-layout-util-vmargin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidetargetvalue="employeeId"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <id
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Id"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        emptyText="Enter Employee Id"
+                                                        fieldDescription="Enter Employee Id"
+                                                        fieldLabel="Employee Id"
+                                                        name="./id"
+                                                        required="{Boolean}true"/>
+                                                </items>
+                                            </empId>
+                                            <empName
+                                                granite:class="hide list-option-listfrom-showhide-target foundation-layout-util-vmargin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidetargetvalue="employeeName"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <name
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        emptyText="Enter Employee Name"
+                                                        fieldDescription="Enter Employee Name"
+                                                        fieldLabel="Employee Name"
+                                                        name="./name"
+                                                        required="{Boolean}true"/>
+                                                </items>
+                                            </empName>
+                                            <empSal
+                                                granite:class="hide list-option-listfrom-showhide-target foundation-layout-util-vmargin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidetargetvalue="employeeSalary"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <sal
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                                        emptyText="Enter Employee Salary"
+                                                        fieldDescription="Enter Employee Salary"
+                                                        fieldLabel="Salary"
+                                                        name="./sal"
+                                                        required="{Boolean}true"/>
+                                                </items>
+                                            </empSal>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </employeeDetails>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

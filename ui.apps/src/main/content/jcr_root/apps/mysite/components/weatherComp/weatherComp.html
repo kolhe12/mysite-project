@@ -1,0 +1,11 @@
+<sly data-sly-use.obj="com.mysite.core.models.WeatherComponentModel">
+    <div class="weather-container" style="background-image:url(${obj.image @ context='uri'});background-position:center">
+        <h1>Weather Details</h1>
+    
+        <div class="weather-overlay">
+            <p class="weather-text" data-sly-test="${obj.pin}">PinCode: ${obj.pin}</p>
+            <p class="weather-text" data-sly-test="${obj.temperature}">Temperature: ${obj.temperature} °C</p>
+            <p class="weather-text" data-sly-test="${obj.place}">Place: ${obj.place}</p>
+        </div>
+    </div>
+</sly>

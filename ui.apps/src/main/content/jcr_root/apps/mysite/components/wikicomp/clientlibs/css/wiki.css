@@ -1,0 +1,19 @@
+.comp p{
+    color:black;
+    background-color:orange;
+    text-align:center;
+}
+
+.comp img
+{
+    width:80%;
+    height:10%;
+    border-radius:50%;
+    border:10px solid orange;
+}
+
+.comp h2
+{
+     text-align:center;
+}
+

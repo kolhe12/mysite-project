@@ -1,0 +1,22 @@
+<sly data-sly-use.carousel="com.adobe.cq.wcm.core.components.models.Carousel"
+     data-sly-template.controls="${@ carousel}">
+<div class="cmp-carousel__actions1">
+
+<button data-sly-test="${carousel.autoplay}"
+                class="cmp-carousel__action cmp-carousel__action--pause"
+                type="button"
+                aria-label="${carousel.accessibilityPause || 'Pause' @ i18n}"
+                data-cmp-hook-carousel="pause">
+<span class="cmp-carousel__action-icon1"></span>
+<span class="cmp-carousel__action-text">${carousel.accessibilityPause || 'Pause' @ i18n}</span>
+</button>
+<button data-sly-test="${carousel.autoplay}"
+                class="cmp-carousel__action1 cmp-carousel__action1--play cmp-carousel__action1--disabled"
+                type="button"
+                aria-label="${carousel.accessibilityPlay || 'Play' @ i18n}"
+                data-cmp-hook-carousel="play">
+<span class="cmp-carousel__action-icon1"></span>
+<span class="cmp-carousel__action-text">${carousel.accessibilityPlay || 'Play' @ i18n}</span>
+</button>
+</div>
+</sly>

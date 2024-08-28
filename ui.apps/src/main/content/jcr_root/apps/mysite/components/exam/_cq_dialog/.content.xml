@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="MyDropDown"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[tab-showhide]"
+    mode="edit">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            active="{Boolean}true"/>
+        <items jcr:primaryType="nt:unstructured">
+            <properties
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Select Tabs"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                    margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <dropdownSelector
+                                        granite:class="cmp-select-type-selection cq-dialog-tab-showhide"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Selection Type"
+                                        name="./selectionType">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <details
+                                                jcr:primaryType="nt:unstructured"
+                                                text="EmpDetails"
+                                                value="selectOption1"/>
+                                            <none
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="None"
+                                                value="selectOption2"/>
+                                        </items>
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-dialog-tab-showhide-target=".list-option-tab-showhide-target"/>
+                                    </dropdownSelector>
+                                </items>
+                            </column>
+                        </items>
+                    </column>
+                </items>
+            </properties>
+            <secondTab
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Employee Details"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                    margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <empId
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Id"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText="Enter Employee Id"
+                                        fieldDescription="Enter Employee Id"
+                                        fieldLabel="Employee Id"
+                                        name="./id"
+                                        required="{Boolean}true"/>
+                                    <empName
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText="Enter Employee Name"
+                                        fieldDescription="Enter Employee Name"
+                                        fieldLabel="Employee Name"
+                                        name="./name"
+                                        required="{Boolean}true"/>
+                                    <empSal
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                        emptyText="Enter Employee Salary"
+                                        fieldDescription="Enter Employee Salary"
+                                        fieldLabel="Salary"
+                                        name="./sal"
+                                        required="{Boolean}true"/>
+                                </items>
+                            </column>
+                        </items>
+                    </columns>
+                </items>
+                <layoutConfig
+                    jcr:primaryType="nt:unstructured"
+                    class="hide list-option-tab-showhide-target selectOption1"/>
+            </secondTab>
+        </items>
+    </content>
+</jcr:root>

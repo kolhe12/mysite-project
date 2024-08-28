@@ -1,0 +1,16 @@
+.text-component {
+    margin-bottom: 20px;
+    background-color:skyblue; /* Set background color to black */
+    color: white; /* Set text color to white */
+    padding: 20px; /* Add padding for better readability */
+}
+
+.text-component h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text-component .text-content {
+    font-size: 16px;
+    line-height: 1.5;
+}

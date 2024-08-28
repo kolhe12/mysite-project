@@ -1,0 +1,19 @@
+<sly data-sly-use.article="com.mysite.core.models.ArticleDialogModel">
+    <div class="article">
+        <h1>${article.title}</h1>
+        <img src="${article.image}" alt="${article.title}" />
+        <p>${article.description}</p>
+        <div class="tags">
+            <ul>
+                <sly data-sly-list.tagDetails="${article.tagDetails}">
+                    <li>
+                        <div class="tag-title">${tagDetails.title}</div>
+                        <div class="tag-description">${tagDetails.description}</div>
+                        <div class="tag-resource-type">${tagDetails.resourceType}</div>
+                    </li>
+                </sly>
+            </ul>
+        </div>
+        <button id="redirectButton">View Tag Details</button>
+    </div>
+</sly>

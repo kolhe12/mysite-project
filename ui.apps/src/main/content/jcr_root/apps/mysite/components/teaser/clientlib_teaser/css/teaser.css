@@ -1,0 +1,95 @@
+
+.teaser{
+    .cmp-teaser .teaser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cmp-teaser .cmp-teaser__content {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 15px;
+}
+.cmp-teaser .cmp-teaser__image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+    .cmp-teaser__description {
+        color:White;
+        padding:1px;
+        position: absolute;
+        top: 650px;
+        left: 30%;
+        transform: translateX(-50%);
+        font-size: 35px;
+       font-family: Arial, sans-serif;
+        
+    }
+
+.registration-form {
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    background-color: #f9f9f9;
+        padding: 50px;
+        position: absolute;
+        top: 100px;
+        left: 80%;
+        transform: translateX(-50%);
+        font-size: 24px;
+}
+
+    .registration-form h2 {
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+
+.form-group {
+    margin-bottom:1px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom:2px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.form-group button {
+    padding: 10px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+/* Optional: Style the form inputs on focus */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+}

@@ -1,0 +1,173 @@
+/* /apps/myproject/components/card/clientlibs/css/card.css */
+.cmp-carousel__content > div img {
+    width: 100%; /* Ensures width always fits. */
+    height: 100%; /* Ensures height always fits. */
+    object-fit: cover; /* This makes the image cover the container */
+    border-radius: 30px;
+}
+
+.cmp-carousel__item {
+    border-radius: 30px; /* Adjust the value as needed */
+    overflow: hidden;
+    width: 1000px; /* Increase the width of the container */
+}
+
+.cmp-carousel__item img {
+    width: 100%; /* Ensures width always fits. */
+    height: 400px; /* Automatically adjusts height to maintain aspect ratio. */
+    object-fit: scale-down; /* Scales the image down to fit within the box, ensuring the whole image is shown. */
+    border-radius: 30px;
+}
+
+.cmp-carousel {
+    margin: 0 auto; /* Center the component */
+    width: 1000px; /* Example width, adjust as needed */
+    height: auto;
+}
+
+/* Styling for the arrow icons */
+.cmp-carousel__action-icon {
+    font-size: 15px; /* Change the font size as needed */
+    color: #333; /* Change the color as needed */
+    cursor: pointer; /* Add cursor style */
+    transition: color 0.3s ease; /* Add transition effect */
+    border: 1px solid #333; /* Add border */
+    border-radius: 50%; /* Make the icon circular */
+    padding: 5px; /* Add padding */
+}
+
+.cmp-carousel__action-icon:hover {
+    color: #007bff; /* Change color on hover */
+    background-color: #f9f9f9; /* Change background color on hover */
+}
+
+.cmp-carousel__action-icon:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Styling for the arrow buttons */
+.cmp-carousel__action {
+    position: absolute;
+    bottom: -20px; /* Adjust distance from the bottom as needed */
+    font-size: 20px; /* Adjust font size as needed */
+    color: #fff; /* Arrow color */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    border: none;
+    border-radius: 50%; /* Make arrow button circular */
+    cursor: pointer;
+    margin: 0 10px; /* Add margin as needed */
+    outline: none;
+}
+
+/* Set transparent background when not hovered */
+.cmp-carousel__action:not(:hover) {
+    background-color: transparent; /* Set background to transparent when not hovered */
+}
+
+/* Styling for the Previous button */
+.cmp-carousel__action--previous {
+    left: calc(35% - 20px - 50px);
+    top: calc(100% + 10px - 15px);;
+}
+
+/* Styling for the next button */
+.cmp-carousel__action--next {
+    right: calc(30% - 20px - 50px);
+    top: calc(100% + 10px - 15px);
+}
+
+/* Navigation arrows */
+.cmp-carousel__action--previous,
+.cmp-carousel__action--next {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 10px; /* Adjust size as needed */
+    color: black; /* Adjust color as needed */
+}
+
+.cmp-carousel__indicator1--active {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.cmp-carousel__item h1 {
+    font-family: 'Nunito', sans-serif;
+    color: #0072ce;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-left: 20px; /* Move the heading towards the left */
+}
+
+.cmp-carousel__item p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    line-height: 1.0;
+    margin-left: 20px; /* Move the paragraph towards the left */
+}
+
+/* Position the text within the carousel item */
+.cmp-carousel__item .text-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2%; /* Adjusted right position */
+    max-width: 70%; /* Adjusted max-width */
+    padding: 20px;
+    background-color: white;
+    border-radius: 25px;
+}
+
+/* Styling for the carousel wrapper */
+.cmp-carousel__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cmp-carousel__indicators {
+    text-align: center; /* Center indicators horizontally */
+    margin-top: 10px; /* Add space between image and indicators */
+}
+
+.cmp-carousel__indicators li {
+    display: inline-block;
+    width: 20px; /* Adjust the width of each indicator */
+    height: 4px; /* Adjust the height of each indicator (increased thickness) */
+    background-color: rgba(0, 0, 0, 0.3); /* Color of inactive indicators */
+    margin: 0 5px; /* Adjust the spacing between indicators */
+    border-radius: 2px; /* Add rounded corners to indicators */
+    transition: background-color 0.3s; /* Smooth transition for color change */
+}
+
+/* Hover effect for inactive indicators */
+.cmp-carousel__indicators li:hover {
+    background-color: rgba(0, 0, 0, 1); /* Darker color on hover */
+}
+
+.carousel-loaded .cmp-carousel__indicators {
+    display: block; /* Show the indicators */
+}
+
+.carousel-container {
+    position: relative;
+    width: 1000px;
+    border-radius: 10px;
+    overflow: hidden; /* Ensure content within the container is clipped */
+}
+
+.carousel-image {
+    width: 100%; /* Ensure the image fills the entire container width */
+    height: 200px;
+    object-fit: cover; /* Cover the container without losing aspect ratio */
+    border-radius: 30px;
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    max-width: 90%; /* Adjust the maximum width as needed */
+    padding:10px;

@@ -1,0 +1,17 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"/>
+
+    
+<sly data-sly-test="${properties.selectionType}">
+    <sly data-sly-test="${properties.selectionType == 'selectOption1'}">
+        Employee Id: ${properties.id}<br>
+        Employee Name: ${properties.name}<br>
+        Employee Salary: ${properties.sal}<br>
+    </sly>
+    <sly data-sly-test="${properties.selectionType == 'selectOption2'}">
+        <span>No data available</span>
+    </sly>
+</sly>
+
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.id && properties.name && properties.sal}"></sly>
+

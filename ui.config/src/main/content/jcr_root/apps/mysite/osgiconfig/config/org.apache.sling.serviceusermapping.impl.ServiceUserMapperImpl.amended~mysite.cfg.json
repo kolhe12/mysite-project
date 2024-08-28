@@ -1,0 +1,10 @@
+{
+  "user.mapping": [
+    "com.mysite.core:page-creator-service=page-creator",
+     "com.mysite.core:service_createpage=service_pageservlet",
+    "com.mysite.core:contactFormService=contactFormService",
+    "mysite.core:page-creator-service=page-creator-service"
+  ]
+
+}
+

@@ -1,0 +1,10 @@
+<sly data-sly-use.productDetails="com.mysite.core.models.ProductDetailsModel">
+ <p>Company Name: ${properties.cname}</p>
+    <sly data-sly-list.product="${productDetails.products}">
+        <div class="product-item">
+            <p>Product Name: ${product.productname}</p>
+            <p>Product ID: ${product.productid}</p>
+        </div>
+    </sly>
+
+</sly>

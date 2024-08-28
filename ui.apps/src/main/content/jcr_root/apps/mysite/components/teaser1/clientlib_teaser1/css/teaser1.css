@@ -1,0 +1,39 @@
+.carousel-container {
+    position: relative;
+    width: 100%; /* Full width */
+    height: 300px; /* Adjust as needed */
+    border-radius: 30px; /* Rounded corners */
+    overflow: hidden; /* Ensure content within the container is clipped */
+}
+
+.carousel-image {
+    width: 100vw; /* Full width of the viewport */
+    height: 100%; /* Ensures the image fills the entire container height */
+    object-fit: fill; /* Cover the container without losing aspect ratio */
+    border-radius: 30px; /* Rounded corners */
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%; /* Adjust the maximum width as needed */
+    padding: 20px;
+    background-color:aliceblue; /* Semi-transparent black background */
+    color: black; /* Text color */
+    border-radius: 15px; /* Rounded corners */
+    text-align: center;
+}
+
+.text-container .title {
+    font-size: 24px; /* Adjust title font size as needed */
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-color:aliceblue; /* Transparent background */
+}
+
+.text-container .description {
+    font-size: 16px; /* Adjust description font size as needed */
+    background-color:aliceblue; /* Transparent background */
+}

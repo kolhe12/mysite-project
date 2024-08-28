@@ -1,0 +1,20 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
+    <sly data-sly-call="${templates.placeholder @ isEmpty = !text, classAppend='cmp-text'}"></sly>
+</sly>
+
+<sly  data-sly-use.contactObj="com.mysite.core.models.ContactCardsModel">
+
+    <div class="g-row">
+        <sly data-sly-list.item= "${contactObj.contact}">
+            <div class="g-col  g-palm-wide-and-up--1-2 g-desk--1-4  print-hidden">
+                <div class="info-box  ">
+                    <div class="info-box__body">
+                        <sly data-sly-test="${item.contactName}">Name - ${item.contactName @ context='html'}<br></sly>
+                        <sly data-sly-test="${item.contactEmail}">Email - <a href="mailto:${item.contactEmail @ context='html'}" x-cq-linkchecker="valid">${item.contactEmail @ context='html'}</a></sly>
+                    </div>
+                </div>
+            </div>
+        </sly>
+    </div>
+
+</sly>

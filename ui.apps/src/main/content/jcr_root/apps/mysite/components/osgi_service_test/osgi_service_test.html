@@ -1,0 +1,12 @@
+<sly data-sly-use.myModel="com.mysite.core.models.CallServletInsideModel"/>
+<div>
+    <p>Servlet Response:</p>
+    <pre>${myModel.servletResponse}</pre>
+</div>
+
+
+
+<sly data-sly-use.myModel="com.mysite.core.models.MyModel"/>
+<div>
+    <p>Response from OSGi Service: ${myModel.servletResponse}</p>
+</div>

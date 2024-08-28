@@ -1,0 +1,141 @@
+#weather-component {
+    font-family: Arial, sans-serif;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+   background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+     background-size: cover;
+    animation: moveClouds 30s linear infinite; /* Animation to move clouds */
+}
+ 
+/* Style for the form */
+#weatherForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+     margin-left: 200px;
+     position: relative;
+    margin-left: 200px;
+    color:white;
+
+}
+ 
+/* Style for the input field */
+#cityInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    background-color:transparent;
+    color:white;
+}
+ 
+/* Style for the search button */
+.search-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+ 
+/* Hover effect for the search button */
+.search-button:hover {
+    background-color: #0056b3;
+}
+ 
+/* Style for the weather details */
+.weather-details {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-color:white;
+}
+ 
+@keyframes movingBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+#weather-component {
+    animation: movingBackground 5s linear infinite; /* Adjust animation duration (30s) and timing function (linear) as needed */
+}
+.divtag{
+    display:flex;
+        flex:row;
+}
+.weather-description {
+    text-align: left; /* Align text to the left */
+    margin-left: 20px; /* Add some left margin for separation */
+    color:white;
+}
+
+.temperature{
+text-align: left; /* Align text to the left */
+    margin-left: 5px;
+    color:white;
+}
+
+.unit{
+font-size:40px;
+    margin-top:15px;
+    color:white;
+}
+.temp{
+    display: flex;
+    align-items: flex-start;
+    color:white;
+    }
+.temperature {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+ .weather-description {
+    font-size:30px;
+    margin-bottom: 20px;
+    color:white;
+  }
+
+  .additional-info {
+     display: flex; /* Display items in a row */
+    flex-wrap: wrap; /* Allow items to wrap if they exceed the width */
+    justify-content: space-between; /* Distribute items evenly along the main axis */
+    margin-bottom: 20px;
+}
+
+  .info-item  {
+      width: calc(20% - 10px); /* Adjust width and margin as needed */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  .info-item h5 {
+    display:flex;
+     text-align: center;
+    padding: 10px;
+    margin-bottom: 5px;
+         height:20px;
+    color:white;
+    text-align:justify;
+}
+.weather-details__description1{
+	text-align-last:right;
+        padding-left:10rem;
+    }

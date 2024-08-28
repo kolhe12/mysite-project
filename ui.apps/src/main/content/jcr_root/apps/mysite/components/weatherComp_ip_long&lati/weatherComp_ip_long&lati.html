@@ -1,0 +1,26 @@
+<sly data-sly-use.obj="com.mysite.core.models.WeatherLong_Latt">
+    <div class="container-weather" style="background-image:url(${obj.image @ context='uri'});background-position:center">
+        <h1>Weather Details</h1>
+    
+        <div class="weather_overlay">
+            
+            <p class="weather-text3" data-sly-test="${obj.temperature}">
+                Temperature: ${obj.temperature} °C
+            </p>
+            
+            
+            <p class="weather-text5" data-sly-test="${obj.place}">
+                Place: ${obj.place}
+            </p>
+            
+            <p class="weather-text4">
+                <img class="weather-icon" src="https://openweathermap.org/img/wn/10d@2x.png" alt="Weather icon"/>
+                <span class="icon-description"></span>
+            </p>
+
+            <p class="weather-text6" data-sly-test="${obj.humidity}">
+                Humidity: ${obj.humidity}
+            </p>
+        </div>
+    </div>
+</sly>

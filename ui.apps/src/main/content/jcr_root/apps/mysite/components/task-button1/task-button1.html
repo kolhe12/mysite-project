@@ -1,0 +1,42 @@
+<sly data-sly-use.model="com.mysite.core.models.WeatherReportModel"/>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientlib.all @ categories='currentlocation1'}"></sly>
+<head><script src="https://kit.fontawesome.com/0cc2b50f21.js"crossorigin="anonymous"></script></head>
+<center>
+<div id="weather-component">
+
+ <div class="divtag">
+    <form id="weatherForm">
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button type="submit" class="submitButton"><i class="fa-solid fa-magnifying-glass" style="font-size:25px;"></i></button>
+<button id="getLocationButton"><i class="fa-solid fa-globe"></i></button>
+        </form>
+    </div>
+    <div id="weatherDetails" class="weather-details">
+<sly data-sly-test="${model}">
+<h2 style="color:white; text-align:left; font-size: 50px;">${model.city}</h2>
+						<div class="weather-details__content">
+                <h1 style="color:white; text-align:left; font-size: 30px;">${model.currentTimeAtLocation}</h1>
+                         <div class="temp">${model.weatherSymbol}<span class="temperature">${model.temperature}</span>
+                            <span class="unit">°C</span>
+                        </div>
+                        <div class="weather-description"><span class="weather-details__description">${model.weatherDescription}</span> 
+                        <span class="weather-details__description1" style="text-align-last:right;">${model.feelsLike}°C</span>
+                        </div>
+                        <div class="additional-info">
+                            <div class="info-item" style="width:20%;"><h5>Pressure</h5> ${model.pressure} hPa</div>
+                            <div class="info-item" style="width:20%;"><h5>Humidity</h5> ${model.humidity}%</div>
+                            <div class="info-item" style="width:20%;"><h5>Wind</h5> ${model.windSpeed} km/h</div>
+                            <div class="info-item" style="width:20%;"><h5>Visibility</h5> ${model.visibility} meters</div>
+                     </div>
+                   </div>
+</sly>
+</div>
+</div>
+ <section data-sly-use.wethimg="com.mysite.core.models.WeatherReportModel"
+             class="bg-image"
+             data-backgroundImage="${wethimg.imageUrl}">
+    </section>
+</center>
+
+
+<sly data-sly-call="${templates.placeholder @ isEmpty =!model.city}"></sly>

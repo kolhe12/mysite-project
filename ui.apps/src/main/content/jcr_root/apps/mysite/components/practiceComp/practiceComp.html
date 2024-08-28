@@ -1,0 +1,18 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"></sly>
+<sly data-sly-use.models="com.mysite.core.models.Practice_JSON_Exp"/>
+
+
+<sly data-sly-test="${models.fname || models.lname}">
+    <div class="practiceComp">
+        <h3>Details</h3>
+        <!-- Check if fname is not null -->
+        <sly data-sly-test="${models.fname}">
+            <p>Fname: ${models.fname}</p>
+        </sly>
+        <!-- Check if lname is not null -->
+        <sly data-sly-test="${models.lname}">
+            <p>Lname: ${models.lname}</p>
+        </sly>
+    </div>
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !models.fname && !models.lname}" />

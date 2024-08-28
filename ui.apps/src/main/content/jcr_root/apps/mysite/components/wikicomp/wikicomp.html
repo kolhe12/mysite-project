@@ -1,0 +1,18 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
+<sly data-sly-call="${templates.placeholder}"></sly>
+</sly>
+ 
+<sly data-sly-use.model="com.mysite.core.models.EmployeeWiki">
+<div class="comp">
+<h2>Employee Details</h2>
+<img src="${model.image}"/>
+<p>${model.text}</p>
+
+<sly data-sly-list.item="${model.employee}">
+<b>Name:</b> ${item.employeename}<br>
+<b>Id:</b> ${item.employeeid}<br>
+<b>Email:</b> ${item.employeemail}<br>
+<b>Dep:</b> ${item.employeedep}<br>
+</sly>
+</sly>
+ 
